@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&family=Raleway:wght@200;300;400;500;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +7,14 @@ body {
   box-sizing: border-box;
   background: url(/images/bg.png);
   font-family: "Roboto", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
 }
 .container {
   max-width: 1150px;
@@ -44,33 +52,83 @@ body {
   font-weight: 500;
   font-size: 14px;
 }
-.toggle-menu-btn{
+.toggle-menu-btn {
   display: none;
   color: aliceblue;
   font-size: 25px;
-  cursor:pointer;
+  cursor: pointer;
 }
-#toggle-menu{
+#toggle-menu {
   display: none;
 }
-
-@media(max-width:940px){
-  .toggle-menu-btn{
+/* nav css end */
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  grid-row-gap: 50px;
+}
+.banner {
+  margin-top: 60px;
+}
+.banner-left h1 {
+  color: rgba(48, 251, 239, 1);
+  font-size: 80px;
+  line-height: 88px;
+  font-weight: 700;
+}
+.banner-left p {
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  padding: 20px 0px;
+}
+.btn-banner {
+  color: white;
+  padding: 15px 40px;
+}
+.banner-right {
+  max-width: 431px;
+  height: 486px;
+}
+.banner-right img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 940px) {
+  .banner {
+    margin-top: 25px;
+  }
+  .row {
+    grid-template-columns: 1fr;
+  }
+  .toggle-menu-btn {
     display: block;
   }
-  .navigation{
+  .navigation {
     position: absolute;
     left: 0;
     top: 60px;
     width: 100%;
     text-align: center;
     transform: translateY(-500px);
-    transition: .5s;
+    background: rgba(40, 40, 40, 1);
+    box-shadow: 4px 3px 8px 0px rgba(0, 0, 0, 0.25);
+    transition: 0.5s;
+    margin-top: 30px;
+    padding: 10px 0px;
   }
-  .navigation li{
-    display:block;
+  .navigation li {
+    display: block;
   }
-  #toggle-menu:checked ~ .navigation{
+  #toggle-menu:checked ~ .navigation {
     transform: translateY(0px);
+  }
+}
+@media (max-width: 700px) {
+  .banner-left h1 {
+    font-size: 34px;
+    line-height: 48px;
   }
 }
